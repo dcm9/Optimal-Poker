@@ -4,8 +4,4 @@ matplotlib
 seaborn
 scikit-learn
 holdem_calc
-re
-codecs
-json
-tarfile
 
