@@ -874,10 +874,6 @@ print(df['flop_pot'])
 
 
 # In[ ]:
-
-
-def pot_clean(pot,actions):
-    if actions = None:
         
 
 
