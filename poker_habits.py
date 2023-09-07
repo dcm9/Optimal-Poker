@@ -910,6 +910,8 @@ from sklearn.cluster import KMeans, AgglomerativeClustering
 df = pd.read_csv('poker_hands_cleaned_dataset.csv')
 df.head(5)
 
+st.dataframe(df)
+
 
 # In[5]:
 
