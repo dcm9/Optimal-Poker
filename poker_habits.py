@@ -179,10 +179,9 @@ hand_rankings = {
 }
 #no hand is -1
 
-df = pd.read_csv('poker_hands_cleaned_dataset.csv')
+df = pd.read_csv(r'C:\Users\Aaron Zhang\new_cleaned_dataset.csv\new_cleaned_dataset.csv')
 df.head(5)
 
-st.dataframe(df)
 
 
 # In[5]:
