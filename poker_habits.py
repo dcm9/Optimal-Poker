@@ -182,8 +182,6 @@ hand_rankings = {
 df = pd.read_csv('new_cleaned_dataset.csv')
 st.write(df)
 
-
-
 # In[5]:
 
 
@@ -197,7 +195,7 @@ plt.xticks(range(1,len(hand_rankings.keys())+1),hand_rankings.keys(), rotation =
 plt.xlabel('Poker Hand')
 plt.ylabel('Frequency of Play')
 plt.title('Frequency of Poker Hand Occurence Post-flop')
-plt.show()
+st.pyplot(plt)
 
 
 # In[81]:
@@ -213,7 +211,7 @@ plt.xticks(range(1,len(hand_rankings.keys())+1),hand_rankings.keys(), rotation =
 plt.xlabel('Poker Hand')
 plt.ylabel('Pre-flop Winning Probability')
 plt.title('Preflop Winning Probability of Hand (1000 Monte Carlo Simulations against all other cards in play)')
-plt.show()
+st.pyplot(plt)
 
 
 # In[ ]:
@@ -227,7 +225,7 @@ plt.show()
 
 #histogram of Aces' probability
 plt.hist(df.groupby('preflop_rank')['preflop_equity'].apply(list)[78.0],bins=30)
-plt.show()
+st.pyplot(plt)
 
 
 # In[129]:
@@ -235,7 +233,7 @@ plt.show()
 
 #barplot of mean preflop aggression across players
 plt.hist(df.groupby('player')['preflop_cat_action'].mean(),bins=30)
-plt.show()
+st.pyplot(plt)
 
 
 # In[120]:
@@ -244,7 +242,7 @@ plt.show()
 #barplot of mean flop aggression across players
 #very interesting, all other stats quite spiked in the middle, but much more variance on mean flop aggression?
 plt.hist(df.groupby('player')['flop_cat_action'].mean(),bins=30)
-plt.show()
+st.pyplot(plt)
 
 
 # In[119]:
@@ -252,7 +250,7 @@ plt.show()
 
 #barplot of turn flop aggression across players
 plt.hist(df.groupby('player')['turn_cat_action'].mean(),bins=30)
-plt.show()
+st.pyplot(plt)
 
 
 # In[118]:
@@ -260,7 +258,7 @@ plt.show()
 
 #barplot of river flop aggression across players
 plt.hist(df.groupby('player')['river_cat_action'].mean(),bins=30)
-plt.show()
+st.pyplot(plt)
 
 
 # In[157]:
@@ -268,7 +266,8 @@ plt.show()
 
 #how percentage to win the pot is directly correlated with final earnings
 data = df[['preflop_equity','flop_equity','turn_equity','river_equity','earnings']].corr()
-sns.heatmap(data)
+htmp = sns.heatmap(data)
+st.pyplot(htmp)
 
 
 # In[160]:
@@ -289,8 +288,6 @@ sns.heatmap(df[['pos','bankroll','preflop_equity','preflop_rank','preflop_pot','
 
 # In[55]:
 
-
-df
 
 
 # In[193]:
