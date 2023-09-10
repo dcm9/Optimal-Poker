@@ -20,7 +20,7 @@ For the LASSO regression, I took the standardized features and performed k-fold 
 
 """)
 
-st.image('figures/kmeans_elbow')
+st.image('figures/kmeans_elbow.png')
 
 
 

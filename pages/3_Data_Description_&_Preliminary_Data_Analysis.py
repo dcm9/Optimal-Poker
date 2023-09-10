@@ -25,4 +25,4 @@ I found four points that would pertain the most to my hypothesis and investigati
                   
 """)
 
-st.image('figures/feature_corr_matrix')
+st.image('figures/feature_corr_matrix.png')
